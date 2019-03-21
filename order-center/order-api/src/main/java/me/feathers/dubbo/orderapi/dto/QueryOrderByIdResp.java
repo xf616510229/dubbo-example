@@ -1,23 +1,29 @@
 package me.feathers.dubbo.orderapi.dto;
 
 import lombok.Data;
-import me.feathers.dubbo.orderapi.dto.base.BaseDto;
-
-import java.io.Serializable;
+import lombok.Getter;
+import lombok.Setter;
+import me.feathers.dubbo.orderapi.dto.base.BaseReq;
 
 /**
  * @author Feahters
  * @date 2019/3/20
  */
 @Data
-public class QueryOrderByIdResp extends BaseDto {
+public class QueryOrderByIdResp extends BaseReq {
 
-    private long id;
-    private String username;
-    private String productCode;
-    private String productName;
-    private double money;
-    private long num;
-    private String createTime;
+    private QueryOrderByIdRespData data;
+   
+    @Setter
+    @Getter
+    public static class QueryOrderByIdRespData {
+        private long id;
+        private String username;
+        private String productCode;
+        private String productName;
+        private double money;
+        private long num;
+        private String createTime;
+    }
     
 }

@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author Feahters
- * @date 2019/3/20
  * @version 1.0
+ * @date 2019/3/20
  */
 //@Service("orderService")
 public class OrderServiceImpl implements OrderService {
@@ -22,12 +22,16 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public QueryOrderByIdResp queryOrderById(QueryOrderByIdReq req) {
         QueryOrderByIdResp resp = new QueryOrderByIdResp();
-        resp.setId(req.getOrderId());
-        resp.setUsername("张三");
-        resp.setMoney(10.5);
-        resp.setNum(1);
-        resp.setProductName("扫把");
-        resp.setCreateTime("2018-01-01");
+        QueryOrderByIdResp.QueryOrderByIdRespData data 
+                = new QueryOrderByIdResp.QueryOrderByIdRespData();
+        data.setId(req.getOrderId());
+        data.setUsername("张三");
+        data.setMoney(10.5);
+        data.setNum(1);
+        data.setProductName("扫把");
+        data.setCreateTime("2018-01-01");
+        resp.setData(data);
+
         return resp;
     }
 }

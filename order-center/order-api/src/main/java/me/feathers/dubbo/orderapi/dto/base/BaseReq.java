@@ -11,6 +11,6 @@ import java.io.Serializable;
  */
 @Setter
 @Getter
-public class BaseDto implements Serializable {
+public class BaseReq implements Serializable {
     
 }
