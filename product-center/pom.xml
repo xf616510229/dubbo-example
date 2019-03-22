@@ -12,7 +12,7 @@
     <artifactId>product-center</artifactId>
     <packaging>pom</packaging>
 
-    <name>order-center</name>
+    <name>product-center</name>
     <description>产品中心服务</description>
     
     <modules>

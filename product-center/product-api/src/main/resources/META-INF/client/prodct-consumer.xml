@@ -8,14 +8,13 @@
            http://www.springframework.org/schema/context 
            http://www.springframework.org/schema/context/spring-context.xsd 
            http://code.alibabatech.com/schema/dubbo 
-           http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
-       default-autowire="byName">
+           http://code.alibabatech.com/schema/dubbo/dubbo.xsd" default-autowire="byName">
 
     <!--允许使用注解调用bean-->
     <context:annotation-config/>
 
     <!--dubbo 调用声明 reference，客户端只需import此xml就可以引用OrderService了-->
-    <dubbo:reference id="orderService"
-                     interface="me.feathers.dubbo.orderapi.service.OrderService"
+    <dubbo:reference id="productService"
+                     interface="me.feathers.dubbo.productapi.service.ProductService"
                      version="1.0"/>
 </beans>

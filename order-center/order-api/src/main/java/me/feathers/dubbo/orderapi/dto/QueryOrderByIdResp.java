@@ -9,21 +9,15 @@ import me.feathers.dubbo.orderapi.dto.base.BaseReq;
  * @author Feahters
  * @date 2019/3/20
  */
-@Data
+@Setter
+@Getter
 public class QueryOrderByIdResp extends BaseReq {
 
-    private QueryOrderByIdRespData data;
-   
-    @Setter
-    @Getter
-    public static class QueryOrderByIdRespData {
-        private long id;
-        private String username;
-        private String productCode;
-        private String productName;
-        private double money;
-        private long num;
-        private String createTime;
-    }
-    
+    private long id;
+    private String username;
+    private String productCode;
+    private String productName;
+    private double money;
+    private long num;
+    private String createTime;
 }
