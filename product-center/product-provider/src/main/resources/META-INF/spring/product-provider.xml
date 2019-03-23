@@ -17,7 +17,7 @@
     <!--声明服务-->
     <dubbo:service id="orderService" 
                    interface="me.feathers.dubbo.productapi.service.ProductService" 
-                   ref="orderService" 
+                   ref="orderServiceImpl" 
                    version="1.0"/>
 
     <bean id="orderServiceImpl" class="me.feathers.dubbo.productprovider.service.impl.ProductServiceImpl"/>
